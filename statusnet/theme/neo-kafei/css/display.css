@@ -1,0 +1,321 @@
+/** theme: neo-blue
+ *
+ * @package   StatusNet
+ * @author    Samantha Doherty <sammy@status.net>
+ * @copyright 2011 StatusNet, Inc.
+ * @license   http://creativecommons.org/licenses/by/3.0/ Creative Commons Attribution 3.0 Unported
+ * @link      http://status.net/
+ * @modded    This file was modded and renamed to neo-kafei by Kafei Interactif Inc.
+ */
+
+@media screen, projection, tv {
+
+body { 
+    background: #888;
+}
+
+#wrap {
+    border: none;
+    padding: 0px 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+    background: #fff;
+}
+
+#header {
+    padding-top: 7px;
+}
+
+a {color: #666;}
+a:hover {color: #333; }
+
+#aside_primary_wrapper {
+    background-color: #ddd;
+}
+
+#content_wrapper  {
+    border-right: 1px solid #ddd;
+}
+
+#site_nav_local_views a  {
+  text-transform: none;
+  font-size: .9em;
+}
+#site_nav_local_views_wrapper  {
+    background-color: #efefef;
+    border-right: 1px solid #ccc;
+    font-size: 0.9em;
+}
+
+#site_nav_global_primary {
+    top: 0px;
+    right: -14px;
+    padding-top: 5px;
+    height: 30px;
+    width: 986px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.7);
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 98;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #555;
+    border-right: 1px solid #555;
+}
+
+#site_nav_global_primary a:hover {
+    background: #555;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;    
+}
+
+#site_notice { 
+    margin: 45px 0px 0px 0px;
+    background-color: #f2f2f2; /* XXX */
+}
+
+#core {
+    border-top: none;
+    margin-top: 3px;
+}
+
+.input_forms {
+    background-color: #fff;
+    left: 0px;
+    padding: 18px 0px 0px 0px;
+}
+
+#site_nav_local_views a:hover, #site_nav_local_views .current a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    background: #666;
+    background: -moz-linear-gradient(top, #888 0%, #666 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888), color-stop(100%,#666));
+    background: -webkit-linear-gradient(top, #888 0%,#666 100%);
+    background: -o-linear-gradient(top, #888 0%,#666 100%);
+    background: -ms-linear-gradient(top, #888 0%,#666 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888', endColorstr='#666',GradientType=0 );
+    background: linear-gradient(top, #888 0%,#666 100%);
+}
+
+#site_nav_global_primary {
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    background: #444;
+    background: -moz-linear-gradient(top, #555 0%, #444 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#555), color-stop(100%,#444));
+    background: -webkit-linear-gradient(top, #555 0%,#444 100%);
+    background: -o-linear-gradient(top, #555 0%,#444 100%);
+    background: -ms-linear-gradient(top, #555 0%,#444 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555', endColorstr='#444',GradientType=0 );
+    background: linear-gradient(top, #555 0%,#444 100%);
+}
+
+#pagination a {
+    color: #444;
+}
+
+
+#footer a {
+    color: #444;
+}
+
+#content h1 {
+    border-bottom: 3px solid #888;
+    color: #888;
+    font-size: 1.4em;
+    letter-spacing: 4px;
+    text-transform: none;
+}
+
+#aside_primary {
+  background: #efefef;
+}
+
+#input_form_nav li a {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    font-weight: bold;
+    line-height: 1.4em;
+    color: #444;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.9);
+    background: #EEE;
+    background: -moz-linear-gradient(top, #ffffff 0%, #EEE 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#EEE));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#EEE 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#EEE 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#EEE 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#EEE',GradientType=0 );
+    background: linear-gradient(top, #ffffff 0%,#EEE 100%);
+}
+
+
+#input_form_nav li:hover a, #input_form_nav li.current a {
+    color: #fff;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #EEE;
+    background: #444;
+    background: -moz-linear-gradient(top, #888 0%, #444 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#888), color-stop(100%,#444));
+    background: -webkit-linear-gradient(top, #888 0%,#444 100%);
+    background: -o-linear-gradient(top, #888 0%,#444 100%);
+    background: -ms-linear-gradient(top, #888 0%,#444 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888', endColorstr='#444',GradientType=0 );
+    background: linear-gradient(top, #888 0%,#444 100%);
+}
+
+
+.entity_actions a, .entity_actions p, .entity_actions .entity_subscribe input, .entity_actions .entity_block input, .entity_actions .entity_moderation input, .entity_actions .entity_role input, .entity_actions .entity_nudge input, .entity_actions .entity_delete input, .entity_actions input.submit {
+        text-shadow:0 1px 0 rgba(255,255,255,0.4);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #ddd !important;
+}
+
+
+.form_notice input.submit, .form_settings input.submit, .form_settings input.cancel, #form_invite input.submit,
+.entity_subscribe .dialogbox input.submit_dialogbox,
+.entity_tag .dialogbox input.submit_dialogbox,
+.form_repeat.dialogbox input.submit_dialogbox
+{ /* TODO combine all these declarations */
+    color:#fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #777;
+    background: -moz-linear-gradient(top, #999 0%, #777 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999), color-stop(100%,#777));
+    background: -webkit-linear-gradient(top, #999 0%,#777 100%);
+    background: -o-linear-gradient(top, #999 0%,#777 100%);
+    background: -ms-linear-gradient(top, #999 0%,#777 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999', endColorstr='#777',GradientType=0 );
+    background: linear-gradient(top, #999 0%,#777 100%);
+}
+
+.form_notice input.submit:hover, .form_settings input.submit:hover, .form_settings input.cancel:hover, #form_invite input.submit:hover,
+.entity_subscribe .dialogbox input.submit_dialogbox:hover,
+.entity_tag .dialogbox input.submit_dialogbox:hover,
+.form_repeat.dialogbox input.submit_dialogbox:hover
+{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
+    background: #666;
+    background: -moz-linear-gradient(top, #666 0%, #444 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#666), color-stop(100%,#444));
+    background: -webkit-linear-gradient(top, #666 0%,#444 100%);
+    background: -o-linear-gradient(top, #666 0%,#444 100%);
+    background: -ms-linear-gradient(top, #666 0%,#444 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666', endColorstr='#444',GradientType=0 );
+    background: linear-gradient(top, #666 0%,#444 100%);
+}
+
+.invite_button {
+    color:#fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #888;
+    background: -moz-linear-gradient(top, #999 0%, #777 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999), color-stop(100%,#777));
+    background: -webkit-linear-gradient(top, #999 0%,#777 100%);
+    background: -o-linear-gradient(top, #999 0%,#777 100%);
+    background: -ms-linear-gradient(top, #999 0%,#777 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999', endColorstr='#777',GradientType=0 );
+    background: linear-gradient(top, #999 0%,#777 100%);
+}
+
+.invite_button:hover {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
+    background: #999;
+    background: -moz-linear-gradient(top, #777 0%, #555 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#777), color-stop(100%,#555));
+    background: -webkit-linear-gradient(top, #777 0%,#555 100%);
+    background: -o-linear-gradient(top, #777 0%,#555 100%);
+    background: -ms-linear-gradient(top, #777 0%,#555 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777', endColorstr='#555',GradientType=0 );
+    background: linear-gradient(top, #777 0%,#555 100%);
+}
+
+/* icons */
+
+.form_notice label.notice_data-attach,
+#export_data li a.rss,
+#export_data li a.atom,
+#export_data li a.foaf,
+.entity_edit a,
+.entity_send-a-message a,
+.entity_nudge p,
+.form_user_nudge input.submit,
+.form_user_block input.submit,
+.form_user_unblock input.submit,
+.form_group_block input.submit,
+.form_group_unblock input.submit,
+.form_make_admin input.submit,
+.notice .attachment,
+.notice-options .notice_reply,
+.notice-options form.form_favor input.submit,
+.notice-options form.form_disfavor input.submit,
+.notice-options .notice_delete,
+.notice-options form.form_repeat input.submit,
+#new_group a,
+#pagination .nav_prev a,
+#pagination .nav_next a,
+button.close,
+.form_group_leave input.submit,
+.form_user_unsubscribe input.submit,
+.form_group_join input.submit,
+.form_user_subscribe input.submit,
+.form_remote_authorize input.submit,
+.entity_subscribe a,
+.entity_moderation p,
+.entity_sandbox input.submit,
+.entity_silence input.submit,
+.entity_role p,
+.entity_role_administrator input.submit,
+.entity_role_moderator input.submit,
+.form_user_remove_peopletag input.submit,
+.form_user_add_peopletag input.submit,
+.form_peopletag_subscribe input.submit,
+.form_peopletag_unsubscribe input.submit,
+.notice-options .repeated,
+.form_notice label.notice_data-geo,
+button.minimize,
+.form_reset_key input.submit,
+.entity_tag a,
+.entity_clear input.submit,
+.entity_flag input.submit,
+.entity_flag p,
+.entity_subscribe input.submit,
+#realtime_play,
+#realtime_pause,
+#realtime_popup,
+.peopletags_edit_button,
+.mode-private .privacy_mode {
+background-image:url(../icons-01.gif);
+background-repeat:no-repeat;
+background-color:transparent;
+}
+
+
+
+
+}/*end of @media screen, projection, tv*/

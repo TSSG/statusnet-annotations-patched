@@ -1,0 +1,94 @@
+Statusnet
+=========
+
+This version of Statusnet enables developers to utilize the annotations plugin found here https://github.com/TSSG/statusnet-annotations-plugin.
+
+This plugin allows custom meta-data to be added to update status messages.
+
+This version of statusnet is based on the 1.0.1 release.
+Installation in the exact same for this version as it is with the 1.0.1 release, if you need instructions please visit here. http://gitorious.org/statusnet/mainline/blobs/master/INSTALL
+
+Changes
+-------
+
+The following updates were added to allow the annotations plugin to function correctly.
+
+EVENTS.txt
+^^^^^^^^^^
+
+Added the following to the bottom of the EVENTS.txt file within the main statunset/ directory
+
+
+-------------------------------------------------------------------------------------------------------------------
+EndPrepareApiStatusesUpdate: at the end of preparing args for the status update action (API); good place to add metadata to notices
+- $action: current action
+- $args: arguments
+
+EndHandleApiStatusesUpdate: right before saving the notice for the status update action (API)
+- $action: current action
+- $args: args
+- $options: array of options (can be modified)
+
+EndHandleStatusesUpdate: right before saving the notice for the status update action (Web interface, not API)
+- $action: current action
+- $options: array of options (can be modified)
+
+SaveNewNoticeAddOptions: at the end of adding attributes to a saved notice based on options
+- $options: array of options
+- $notice: notice being saved (can be modified)
+
+EndApiGetSimpleStatusArray: at the end of fetching all notice attributes to show a notice (API)
+- $notice: notice being shown
+- $twitter_status: corresponding simple status array
+
+ShowStatusXmlAnnotations: when encountering an Annotations when showing a notice (API)
+- $action: current action
+- $annotations: annotations to be shown
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+actions/apistatusesupdate.php
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Added to line 177
+-------------------------------------------------------------------------------------------------------------------
+	Event::handle('EndPrepareApiStatusesUpdate', array($this, $args));
+-------------------------------------------------------------------------------------------------------------------
+
+Added to line 340
+-------------------------------------------------------------------------------------------------------------------
+	if (!Event::handle('EndHandleApiStatusesUpdate', array($this, $args, &$options))) {
+                         return;
+        }
+-------------------------------------------------------------------------------------------------------------------
+
+
+actions/newnotice.php
+^^^^^^^^^^^^^^^^^^^^^
+
+Added to line 213
+
+-------------------------------------------------------------------------------------------------------------------
+	if (!Event::handle('EndHandleStatusesUpdate', array($this, &$options))) {
+		return;
+	}
+-------------------------------------------------------------------------------------------------------------------
+
+
+lib/apiaction.php
+^^^^^^^^^^^^^^^^^
+
+Added to line 381
+
+-------------------------------------------------------------------------------------------------------------------
+	Event::handle('EndApiGetSimpleStatusArray', array(&$notice, &$twitter_status));
+-------------------------------------------------------------------------------------------------------------------
+
+Added to line 617
+
+-------------------------------------------------------------------------------------------------------------------
+	case 'annotations':
+		Event::handle('ShowStatusXmlAnnotations', array($this, $twitter_status['annotations']));
+	break;
+-------------------------------------------------------------------------------------------------------------------
